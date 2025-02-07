@@ -150,9 +150,9 @@ local function combine(weapontype, warheadWeapon)
     if(warheadWeaponNameMap[buildUpName]) then
       buildUpName = warheadWeaponNameMap[buildUpName]
     end
-    table.insert(recipe.ingredients, {name = buildUpName, amount = warheadWeapon.recipe.build_up_ingredient.amount})
+    table.insert(recipe.ingredients, {type="item", name = buildUpName, amount = warheadWeapon.recipe.build_up_ingredient.amount})--makes a new warhead entry
   else
-    table.insert(recipe.ingredients, {name = warheadWeapon.recipe.warhead_name, amount = weapontype.recipe.warhead_count})
+    table.insert(recipe.ingredients, {type="item", name = warheadWeapon.recipe.warhead_name, amount = weapontype.recipe.warhead_count})--makes a new weapontype entry
     warheadsUsed = weapontype.recipe.warhead_count
   end
   for _,i in pairs(warheadWeapon.recipe.additional_ingedients) do
@@ -202,7 +202,7 @@ local function combine(weapontype, warheadWeapon)
   end
   recipe.ingredients = {}
   for ingName,ingAmount in pairs(recipeIngreds) do
-    table.insert(recipe.ingredients, {ingName,ingAmount})
+    table.insert(recipe.ingredients, {type="item", name=ingName, amount=ingAmount})
   end
   result.recipe = recipe
 
