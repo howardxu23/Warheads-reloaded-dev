@@ -16,6 +16,7 @@ weaponTypes["shotgun-shell-birdshot"]= {
   image_warhead_shift = {-8, -8},
   item = table.deepcopy(data.raw.ammo["piercing-shotgun-shell"]),
   projectile = table.deepcopy(data.raw.projectile["piercing-shotgun-pellet"]),
+  ammo_category = "shotgun-shell",
 }
 local shotgunActionIndex = 1
 if  (data.raw.ammo["piercing-shotgun-shell"].ammo_type.action[2]) then
@@ -50,6 +51,7 @@ weaponTypes["shotgun-shell-buckshot"]= {
   image_warhead_shift = {-8, -8},
   item = table.deepcopy(data.raw.ammo["piercing-shotgun-shell"]),
   projectile = table.deepcopy(data.raw.projectile["piercing-shotgun-pellet"]),
+  ammo_category = "shotgun-shell",
 }
 weaponTypes["shotgun-shell-buckshot"].item.ammo_type.action[shotgunActionIndex].repeat_count = 6
 
@@ -71,8 +73,10 @@ weaponTypes["shotgun-shell-slug"]= {
   image_warhead_shift = {-8, -8},
   item = table.deepcopy(data.raw.ammo["piercing-shotgun-shell"]),
   projectile = table.deepcopy(data.raw.projectile["piercing-shotgun-pellet"]),
+  ammo_category = "shotgun-shell",
 }
 weaponTypes["shotgun-shell-slug"].item.ammo_type.action[shotgunActionIndex].repeat_count = 1
+
 if weaponTypes["shotgun-shell-slug"].item.ammo_type.action[shotgunActionIndex].action_delivery.type then
   weaponTypes["shotgun-shell-slug"].item.ammo_type.action[shotgunActionIndex].action_delivery.direction_deviation = 0
 else
@@ -97,6 +101,7 @@ weaponTypes["shotgun-shell"]= { -- DO NOT USE, ONLY HERE AS FALLBACK...
   image_warhead_shift = {-8, -8},
   item = table.deepcopy(data.raw.ammo["piercing-shotgun-shell"]),
   projectile = table.deepcopy(data.raw.projectile["piercing-shotgun-pellet"]),
+  ammo_category = "shotgun-shell",
 }
 
 

@@ -6,7 +6,7 @@ function warhead_prototype(name)--REMEBER TO REMOVE "-dev" FOR RELEASE
 end
 require("prototypes.warheads")
 require("prototypes.basegame-weapontype-add")
-
+--[[
 if mods["SchallTankPlatoon"] then
   require("prototypes.compatibility.SchallTankPlatoon-weapontypes")
   --require("prototypes.compatibility.SchallTankPlatoon-warheads")
@@ -37,7 +37,4 @@ end
 if mods["RampantArsenal"] then
   require("prototypes.compatibility.rampant-arsenal")
 end
-
-
-
-
+]]--
